@@ -1,0 +1,12 @@
+<div class="card" style="width: 20rem; height: 30rem; padding: 0.5rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{instance.title}}</h5><hr/>
+      <p class="card-text">Author: {{instance.author}}</p>
+      <p class="card-text">Sales Rank: {{instance.sales_rank}}</p>
+      <p class="card-text">Publisher: {% if instance.publisher != 'NULL' %} {{instance.publisher}} {% else %} Unknown {% endif %}</p>
+      <p class="card-text">Page: {{instance.page}}</p>
+      <p class="card-text">Position: {{instance.position}}</p>
+      <p class="card-text">Page Count: {{instance.pages}}</p>
+      <p class="card-text">Date: {{instance.date}}</p>
+    </div><br/>
+  </div>

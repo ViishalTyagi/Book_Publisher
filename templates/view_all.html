@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+        <div class='row mb-3'>
+            {% if query%}
+            <div class='col-12 col-md-6 mx-auto py-5'>
+                    {% include 'snippets/filter.html' %}
+            </div>
+            <div class='col-12' >
+                    <b>Results for {{ query }}</b>:
+                <hr/>
+            </div>
+
+            {%else%}
+            <div class='col-12 col-md-6 mx-auto py-5'>
+                {% include 'snippets/search-form.html' %}
+            </div>
+            <div class='col-12'>
+                <hr/>
+            </div>
+            {% endif %}
+        </div>
+
+        <div class='row'>
+            {% if object_list is not None%}
+            {% for obj in object_list %}
+            <div class='col'>
+                {% include 'snippets/card.html' with instance=obj %}
+            </div>
+            {% endfor %} 
+            {%else%}
+            <b style="margin-left: 400px;">Your book is not found! Please go back to home page and use another keyword to search.</b>
+            {% endif %}
+        </div>
+    
+{% endblock %}

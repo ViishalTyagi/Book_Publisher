@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{%load static%}
+{% block content %}
+
+<div class='text-center py-3'>
+        <h1>{{ content }}</h1>
+    </div>
+<div class='row ml-auto py-5'>
+    <div class='col-12 col-md-6 mx-auto py-'>
+            {% include 'snippets/search-form.html' %}
+        <!-- <img src="{%static "products/Allu.png" %}"  class="rounded mx-auto d-block" style='max-height: 200px;' /> -->
+
+    </div>
+</div>
+
+{% endblock %}
